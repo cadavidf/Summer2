@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Verification</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Additional styles for smoother transitions */
+        button:hover { 
+            transform: scale(1.05);
+            transition: all 0.2s ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 h-screen flex items-center justify-center">
+    <div class="text-center bg-white p-8 rounded-lg shadow-xl w-full max-w-md">
+        <h1 class="text-2xl font-bold mb-4">Age Verification</h1>
+        <p class="mb-6 text-gray-600">Please confirm that you are over 18 years old to proceed.</p>
+        <div class="flex justify-center space-x-4">
+            <!-- Added ARIA roles and labels for accessibility -->
+            <button role="button" aria-label="Confirm age over 18" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded transform transition duration-200">Yes</button>
+            <button role="button" aria-label="Deny age over 18" class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded transform transition duration-200">No</button>
+        </div>
+    </div>
+</body>
+</html>
