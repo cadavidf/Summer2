@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(to right, #4a148c, #880e4f);
+    }
+
+    .modal {
+      display: none;
+    }
+  </style>
+  <title>Age Verification</title>
+</head>
+
+<body class="flex items-center justify-center min-h-screen">
+
+  <!-- Modal for Age Verification -->
+  <div id="ageModal" class="modal fixed inset-0 z-10 flex items-center justify-center">
+    <div class="bg-white p-8 rounded-lg shadow-md">
+      <h1 class="text-2xl font-bold mb-6">Are you over 18 years old?</h1>
+      <div class="flex space-x-4">
+        <a href="#" class="bg-purple-500 hover:bg-purple-700 text-white py-2 px-4 rounded focus:outline-none focus:shadow-outline-purple">Yes</a>
+        <a href="#" class="bg-red-500 hover:bg-red-700 text-white py-2 px-4 rounded focus:outline-none focus:shadow-outline-red">No</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // JavaScript to show the modal
+    document.addEventListener('DOMContentLoaded', function () {
+      document.getElementById('ageModal').style.display = 'flex';
+    });
+  </script>
+
+</body>
+
+</html>
