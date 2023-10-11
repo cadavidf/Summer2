@@ -1,1 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+  <style>
+    body { margin: 0; font-family: "Lato", sans-serif;}
+
+    .overlay-footer {
+      display: none; position: fixed; bottom: 0; left: 0; width: 100%;
+      background: rgba(0, 0, 0, 0.66); padding: 15px; box-sizing: border-box; z-index: 999;
+    }
+
+    button { padding: 10px 20px; margin-right: 10px; border-radius: 20px; cursor: pointer; color: #fff; font-size: 16px; outline: none; border: none; }
+
+    #accept-button { background-color: #fcd420; }
+
+    #reject-button { background-color: #ffdd00; }
+
+    a { color: #fff; text-decoration: none; }
+  </style>
+</head>
+
+<body>
+
+  <div class="overlay-footer" id="cookieOverlay">
+    <button id="accept-button" onclick="handleCookie(true)">Accept</button>
+    <button id="reject-button" onclick="handleCookie(false)">Reject</button>
+    <a href="cookie-policy.html" target="_blank">Cookie Policy</a>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      if (!localStorage.getItem('cookieConsent')) {
+        document.getElementById('cookieOverlay').style.display = 'flex';
+      }
+    });
+
+    function handleCookie(consent) {
+      localStorage.setItem('cookieConsent', consent);
+      document.getElementById('cookieOverlay').style.display = 'none';
+    }
+  </script>
+
+</body>
+
+</html>
