@@ -1,6 +1,6 @@
 # Multimedia Hub 🌐
 
-Welcome to Multimedia Hub, your personalized gateway to all things [Your Name]! 🚀
+Welcome to Multimedia Hub, your personalized gateway to all things! 🚀
 
 ## Table of Contents
 - [Overview](#overview)
