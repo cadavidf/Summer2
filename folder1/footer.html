@@ -2,11 +2,16 @@
 <html lang="en">
 
 <head>
+  <!-- Document metadata and viewport configuration -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Google Fonts link for Lato font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+  
+  <!-- Internal styles for body and overlay-footer -->
   <style>
     body { margin: 0; font-family: "Lato", sans-serif;}
 
@@ -27,19 +32,27 @@
 
 <body>
 
+  <!-- Cookie Consent Overlay Footer -->
   <div class="overlay-footer" id="cookieOverlay">
+    <!-- Accept and Reject buttons with associated functions -->
     <button id="accept-button" onclick="handleCookie(true)">Accept</button>
     <button id="reject-button" onclick="handleCookie(false)">Reject</button>
+    
+    <!-- Link to the Cookie Policy page -->
     <a href="cookie-policy.html" target="_blank">Cookie Policy</a>
   </div>
 
+  <!-- JavaScript for handling cookie consent -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
+      // Check if cookie consent has been given
       if (!localStorage.getItem('cookieConsent')) {
+        // Display the cookie consent overlay
         document.getElementById('cookieOverlay').style.display = 'flex';
       }
     });
 
+    // Function to handle cookie consent and hide the overlay
     function handleCookie(consent) {
       localStorage.setItem('cookieConsent', consent);
       document.getElementById('cookieOverlay').style.display = 'none';
